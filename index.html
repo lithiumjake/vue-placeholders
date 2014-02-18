@@ -5,19 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Vue Placeholdes</title>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <style>
-      #demo: {font-family:sans-serif; font-size:14px;}
-    </style>
+      [v-cloak] { display: none; }
+      code {color:black; background-color:#CCC; font-size:18px; font-weight:bold}
+      h2 {margin-top:50px; margin-bottom:10px;}
+      hr {margin-top:10px; margin-bottom:30px;}
+     </style>
   </head>
   <body>
-    <div id="demo">
-      <img v-phimg="200x200">
-      <div v-phtxt="4p5s"></div>
+    <div class="container">
+      <section id="demo" v-cloak>
+        <h1>vue-placeholders
+        <small>It's really really easy. Seriously, it's so easy:</small></h1>
+        <hr>
+        <div class="row">
+        <div class="col-sm-6"> 
+          <p><code>&lt;img v-phimg="300x200"&gt;</code></p>
+          <img v-phimg="300x200">
+        </div>
+        <div class="col-sm-6">
+          <p><code>&lt;div v-phtxt="2p3s"&gt;&lt;/div&gt;</code></p>
+          <div v-phtxt="2p3s"></div>
+        </div>
+        </div>
+
+        <h2>Try it!</h2>
+        <hr>
+        <div class="row">
+        <div class="col-sm-6"> 
+          <p><code>&lt;img v-phimg="<input size="10" v-model="dimensions">"&gt;</code></p>
+          <img v-phimg="dimensions">
+        </div>
+        <div class="col-sm-6">
+          <p><code>&lt;div v-phtxt="<input size="10" v-model="lorem">"&gt;&lt;/div&gt;</code></p>
+          <div v-phtxt="lorem"></div>
+        </div>
+        </div>
+      </section>
     </div>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/0.8.6/vue.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/0.8.6/vue.min.js"></script>
     <script src="dist/vue-placeholders.js"></script>
     <script>
-      var demo = new Vue({ el: "#demo" })
+      var demo = new Vue({ 
+        el: "#demo",
+        data: {dimensions:"200x200", lorem:"3p5s"}
+      })
     </script>
   </body>
 </html>
