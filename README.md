@@ -16,7 +16,9 @@ For lorem-ipsum text:
 ```Html
   <div v-phtxt="4p6s"></div>
 ```
- 
+
+You can check out a demo [here](http://lithiumjake.github.io/vue-placeholders/) 
+
 ## API
 
 The **v-phimg** directive expects a string describing the dimensions in  pixels, seperated by an 'x', ie "200x200" 
