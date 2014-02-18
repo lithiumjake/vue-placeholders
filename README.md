@@ -17,7 +17,7 @@ For lorem-ipsum text:
   <div v-phtxt="4p6s"></div>
 ```
 
-You can check out a demo [here](http://lithiumjake.github.io/vue-placeholders/) 
+### You can check out a demo [here](http://lithiumjake.github.io/vue-placeholders/) 
 
 ## API
 
