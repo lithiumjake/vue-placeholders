@@ -1,0 +1,40 @@
+{
+  "name": "vue-placeholders",
+  "version": "0.1.0",
+  "author": {
+    "name": "lithiumjake",
+    "email": "lithiumjake@mail.com",
+    "url": "lithiumjake.github.io"
+  },
+  "license": "MIT",
+  "description": "Vue directive for easy lorem-ipsum text and place-holder images",
+  "keywords": [
+    "Vue",
+    "lorem-ipsum"
+  ],
+  "main": "dist/vue-placeholders.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lithiumjake/vue-placeholders.git"
+  },
+  "bugs": "https://github.com/lithiummjake/vue-placeholders/issues",
+  "homepage": "https://github.com/lithiumjake/vue-placeholders",
+  "devDependencies": {
+    "testem": "*",
+    "mocha": "*",
+    "chai": "*",
+    "sinon": "*",
+    "sinon-chai": "*",
+    "browserify": "*",
+    "watchify": "*",
+    "uglify-js": "*"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/testem ci",
+    "bdd": "node_modules/.bin/testem -g",
+    "build-debug": "node_modules/.bin/browserify src/index.js -d > dist/vue-placeholders.js",
+    "build-min": "node_modules/.bin/browserify src/index.js | uglifyjs > dist/vue-placeholders.min.js",
+    "build": "npm run build-debug && npm run build-min",
+    "watch": "node_modules/.bin/watchify src/index.js -d -o dist/vue-placeholders.js -v"
+  }
+}

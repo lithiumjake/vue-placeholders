@@ -1,0 +1,16 @@
+{
+  "framework": "mocha",
+  "launch_in_ci": [
+    "phantomjs"
+  ],
+  "launch_in_dev": [
+    "phantomjs"
+  ],
+  "serve_files": [
+    "./spec/browserified.js"
+  ],
+  "src_files": [],
+
+  "before_tests": "./node_modules/.bin/browserify ./spec/tests.js -o ./spec/browserified.js",
+  "on_exit": "rm ./spec/browserified.js"
+}

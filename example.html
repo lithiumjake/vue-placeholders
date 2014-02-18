@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vue Placeholdes</title>
+    <style>
+      #demo: {font-family:sans-serif; font-size:14px;}
+    </style>
+  </head>
+  <body>
+    <div id="demo">
+      <img v-phimg="200x200">
+      <div v-phtxt="4p5s"></div>
+    </div>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/0.8.6/vue.min.js"></script>
+    <script src="dist/vue-placeholders.js"></script>
+    <script>
+      var demo = new Vue({ el: "#demo" })
+    </script>
+  </body>
+</html>
